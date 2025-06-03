@@ -36,8 +36,8 @@
       そんなこんなで、今後ともよろしくお願いいたします！
        </p>
 
-    <!-- 私初写真載せ -->
-   <img src="https://hikari-hikaru.github.io/dairy4/image0.jpeg" alt="きれいな鯉" width="300">
+    <!-- 私、実は初めての自分の写真載せてみました(笑) -->
+   <img src="https://hikari-hikaru.github.io/dairy4/image1.jpeg" alt="今日の主人公" width="300">
   </main>
 
   <div id="blackout"></div>
