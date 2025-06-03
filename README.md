@@ -4,6 +4,23 @@
   <meta charset="UTF-8">
   <title>2025年8月10日 - My birthday! </title>
   <link rel="stylesheet" href="../style.css"> <!-- 共通CSSの読み込み -->
+   <style>
+    #blackout {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: black;
+      z-index: 9999;
+    }
+
+    .protected-photo {
+      width: 300px;
+      user-select: none;
+      -webkit-user-drag: none;
+      pointer-events: auto;
+      margin-bottom: 16px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -17,10 +34,39 @@
       特に特別なことは無いのですが、毎年思うのが「誕生日」ってちょっとワクワクしますよね(笑)。<br><br>
       <br><br>
       そんなこんなで、今後ともよろしくお願いいたします！
-    </p>
+       </p>
+
+    <!-- 私初写真載せ -->
+   <img src="https://hikari-hikaru.github.io/dairy4/image0.jpeg" alt="きれいな鯉" width="300">
   </main>
-  <footer>
-    <small>&copy; 1994 HIKARI HIKARU All rights reserved.</small>
-  </footer>
+
+  <div id="blackout"></div>
+
+  <script>
+    const photos = document.querySelectorAll('.protected-photo');
+    const blackout = document.getElementById('blackout');
+
+    photos.forEach(photo => {
+      let timer;
+
+      photo.addEventListener('touchstart', () => {
+        timer = setTimeout(() => {
+          blackout.style.display = 'block';
+        }, 500);
+      });
+
+      photo.addEventListener('touchend', () => {
+        clearTimeout(timer);
+      });
+
+      photo.addEventListener('touchcancel', () => {
+        clearTimeout(timer);
+      });
+    });
+
+    blackout.addEventListener('click', () => {
+      blackout.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
