@@ -35,7 +35,10 @@
       right: 12px;
       color: white;
       font-size: 12px;
-      opacity: 0.6;
+      opacity: 0.85;
+      padding: 2px 6px;
+      background: rgba(0, 0, 0, 0.4); /* 薄い黒背景 */
+      border-radius: 4px;
       text-shadow: 1px 1px 2px black;
       pointer-events: none;
     }
