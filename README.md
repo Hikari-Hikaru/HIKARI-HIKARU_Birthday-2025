@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>2025年8月10日 - My birthday! </title>
   <link rel="stylesheet" href="../style.css"> <!-- 共通CSSの読み込み -->
-   <style>
+  <style>
     #blackout {
       display: none;
       position: fixed;
@@ -19,13 +19,28 @@
       -webkit-user-drag: none;
       pointer-events: auto;
       margin-bottom: 16px;
+
+      /* 保存・スクショ対策（黒くなる可能性） */
+      mix-blend-mode: multiply;
+      filter: brightness(0.3);
+      -webkit-mask-image: linear-gradient(black, black);
+    }
+
+    .photo-wrapper {
+      position: relative;
+      display: inline-block;
     }
   </style>
 </head>
-<body>
+<body
+  oncontextmenu="return false;"
+  onselectstart="return false;"
+  ondragstart="return false;"
+>
   <header>
     <h1>HIKARI・HIKARU 日々のブログ</h1>
   </header>
+
   <main>
     <h2>2025年8月10日 - ハッピーバースデー🎂✨</h2>
     <p>
@@ -34,10 +49,12 @@
       特に特別なことは無いのですが、毎年思うのが「誕生日」ってちょっとワクワクしますよね(笑)。 <br>
       <br><br>
       そんなこんなで、今後ともよろしくお願いいたします！
-       </p>
+    </p>
 
-    <!-- 私、実は初めての自分の写真載せてみました(笑) -->
-   <img src="https://hikari-hikaru.github.io/dairy5/image2.jpeg" alt="今日の主人公" width="300">
+    <!-- 写真をラップして保護 -->
+    <div class="photo-wrapper">
+      <img src="https://hikari-hikaru.github.io/dairy5/image2.jpeg" alt="今日の主人公" class="protected-photo">
+    </div>
   </main>
 
   <div id="blackout"></div>
