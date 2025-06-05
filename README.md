@@ -31,16 +31,18 @@
 
     .watermark {
       position: absolute;
-      bottom: 8px;
-      right: 12px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       color: white;
-      font-size: 12px;
-      opacity: 0.85;
-      padding: 2px 6px;
-      background: rgba(0, 0, 0, 0.4); /* 薄い黒背景 */
-      border-radius: 4px;
-      text-shadow: 1px 1px 2px black;
+      font-size: 24px;
+      opacity: 0.2;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-shadow: 2px 2px 4px black;
       pointer-events: none;
+      white-space: nowrap;
     }
   </style>
 </head>
