@@ -22,31 +22,54 @@
       z-index: 9999;
     }
 
+    .gallery {
+      display: flex;
+      gap: 10px; /* 画像の間隔 */
+      justify-content: center;
+      flex-wrap: nowrap; /* スマホでも横並び */
+      overflow-x: auto; /* 横スクロール対応 */
+    }
+
     .watermark-container {
       position: relative;
-      display: block;
-      max-width: 600px;
-      margin: 0 auto 20px;
+      width: 45%; /* 2枚が横に収まる */
+      max-width: 400px;
     }
 
     .protected-photo {
       width: 100%;
+      display: block;
       user-select: none;
       -webkit-user-drag: none;
       pointer-events: auto;
-      display: block;
     }
 
-    .watermark-text {
+    /* 全面ウォーターマーク */
+    .watermark-container::before {
+      content: "@HIKARUHIKARI ";
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(-30deg);
-      color: rgba(255, 105, 180, 0.2); /* ショッキングピンクの透かし（薄い） */
-      font-size: 3em;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: rgba(255, 105, 180, 0.1); /* ショッキングピンク薄め */
+      font-size: 2em;
       font-weight: bold;
-      white-space: nowrap;
-      pointer-events: none; /* 透かし部分はクリック無効 */
+      white-space: pre;
+      pointer-events: none;
+      background-repeat: repeat;
+      background-size: 150px 150px;
+      background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255, 105, 180, 0.1) 0,
+        rgba(255, 105, 180, 0.1) 50%,
+        transparent 50%,
+        transparent 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      mix-blend-mode: overlay;
     }
   </style>
 </head>
@@ -54,9 +77,13 @@
   <h1>2025.08.10.-My birthday🎂✨</h1>
   <p>今日は私の誕生日！</p>
 
-  <div class="watermark-container">
-    <img src="images/image0.jpeg" alt="誕生日の写真" class="protected-photo">
-    <div class="watermark-text">@HIKARUHIKARI</div>
+  <div class="gallery">
+    <div class="watermark-container">
+      <img src="images/image0.jpeg" alt="誕生日の写真1" class="protected-photo">
+    </div>
+    <div class="watermark-container">
+      <img src="images/image2.jpeg" alt="誕生日の写真2" class="protected-photo">
+    </div>
   </div>
 
   <div id="blackout"></div>
