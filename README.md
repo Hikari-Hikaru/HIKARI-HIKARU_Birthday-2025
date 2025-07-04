@@ -14,6 +14,12 @@
       padding: 20px;
     }
 
+    p {
+      color: #000; /* 本文の黒文字 */
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
     #blackout {
       display: none;
       position: fixed;
@@ -26,8 +32,7 @@
       display: flex;
       gap: 10px; /* 画像の間隔 */
       justify-content: center;
-      flex-wrap: nowrap; /* スマホでも横並び */
-      overflow-x: auto; /* 横スクロール対応 */
+      flex-wrap: wrap; /* スマホで縦並びに */
     }
 
     .watermark-container {
@@ -75,7 +80,9 @@
 </head>
 <body>
   <h1>2025.08.10.-My birthday🎂✨</h1>
-  <p>今日は私の誕生日！</p>
+
+  <p>今日はHIKARI・HIKARUの誕生日です！笑。ちなみに大谷翔平選手世代なので31歳になりました✨<br>
+  これからもいろんなことに挑戦しようと思うので、みなさんよろしくお願いします👍</p>
 
   <div class="gallery">
     <div class="watermark-container">
