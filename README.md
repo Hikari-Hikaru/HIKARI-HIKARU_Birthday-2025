@@ -88,10 +88,10 @@
 
   <div class="gallery">
     <div class="watermark-container">
-      <img src="https://raw.githubusercontent.com/Hikari-Hikaru/HIKARI-introdaction/main/image0.jpeg" alt="誕生日の写真1" class="protected-photo">
+      <img src="https://raw.githubusercontent.com/Hikari-Hikaru/HIKARI-introdaction/main/image0.jpeg"alt="誕生日の写真1"class="protected-photo">
     </div>
     <div class="watermark-container">
-      <img src="https://raw.githubusercontent.com/Hikari-Hikaru/HIKARI-introdaction/main/image2.jpeg" alt="誕生日の写真2" class="protected-photo">
+      <img src="https://raw.githubusercontent.com/Hikari-Hikaru/HIKARI-introdaction/main/image2.jpeg"alt="誕生日の写真2"class="protected-photo">
     </div>
   </div>
 
