@@ -79,42 +79,4 @@
   </style>
 </head>
 <body>
-  <h1>2025.08.10.-My birthday🎂✨</h1>
-
-  <p>今日はHIKARI・HIKARUの誕生日です！笑。ちなみに大谷翔平選手世代なので31歳になりました✨<br>
-  これからもいろんなことに挑戦しようと思うので、みなさんよろしくお願いします👍</p>
-
-  <div class="gallery">
-    <div class="watermark-container">
-      <img src="images/image0.jpeg" alt="誕生日の写真1" class="protected-photo">
-    </div>
-    <div class="watermark-container">
-      <img src="images/image2.jpeg" alt="誕生日の写真2" class="protected-photo">
-    </div>
-  </div>
-
-  <div id="blackout"></div>
-
-  <script>
-    const photos = document.querySelectorAll('.protected-photo');
-    const blackout = document.getElementById('blackout');
-    photos.forEach(photo => {
-      let timer;
-      photo.addEventListener('touchstart', () => {
-        timer = setTimeout(() => {
-          blackout.style.display = 'block';
-        }, 500);
-      });
-      photo.addEventListener('touchend', () => {
-        clearTimeout(timer);
-      });
-      photo.addEventListener('touchcancel', () => {
-        clearTimeout(timer);
-      });
-    });
-    blackout.addEventListener('click', () => {
-      blackout.style.display = 'none';
-    });
-  </script>
-</body>
-</html>
+  <h1>2025.08.10.-My birthday🎂✨<
