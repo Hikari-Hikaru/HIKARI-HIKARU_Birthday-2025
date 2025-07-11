@@ -80,7 +80,7 @@
 
   <div class="gallery">
     <div class="watermark-container">
-      <img src="https://raw.githubusercontent.com/Hikari-Hikaru/HIKARI-HIKARU_Birthday-2025/main/image0.jpeg" alt="誕生日の写真1" class="protected-photo">
+      <img src="https://raw.githubusercontent.com/Hikari-Hikaru/HIKARI-HIKARU_Birthday-2025/main/image0.jpg" alt="誕生日の写真1" class="protected-photo">
     </div>
     <div class="watermark-container">
       <img src="https://raw.githubusercontent.com/Hikari-Hikaru/HIKARI-HIKARU_Birthday-2025/main/image2.jpeg" alt="誕生日の写真2" class="protected-photo">
