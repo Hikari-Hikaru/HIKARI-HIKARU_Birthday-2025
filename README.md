@@ -32,80 +32,6 @@
       width: 45%; /* 2枚横並び */
       max-width: 400px;
       cursor: pointer;
-
-      /* 星の飾り枠 */
-      padding: 15px;
-      border: 3px solid transparent;
-      border-image: linear-gradient(45deg, gold 25%, transparent 25%, transparent 50%, gold 50%, gold 75%, transparent 75%, transparent 100%);
-      border-image-slice: 1;
-      border-radius: 15px;
-
-      /* 星の装飾を四隅に追加 */
-    }
-    /* 四隅の星の疑似要素 */
-    .watermark-container::before,
-    .watermark-container::after,
-    .watermark-container div::before,
-    .watermark-container div::after {
-      content: "★";
-      position: absolute;
-      color: gold;
-      font-size: 24px;
-      text-shadow: 0 0 5px orange;
-      user-select: none;
-      pointer-events: none;
-    }
-    .watermark-container::before {
-      top: 5px;
-      left: 5px;
-    }
-    .watermark-container::after {
-      top: 5px;
-      right: 5px;
-    }
-    .watermark-container div::before {
-      bottom: 5px;
-      left: 5px;
-    }
-    .watermark-container div::after {
-      bottom: 5px;
-      right: 5px;
-    }
-
-    /* image2だけのシンプル星枠にするための調整 */
-    .watermark-container.simple-stars {
-      border-image: none;
-      border: 2px solid gold;
-      padding: 10px;
-      border-radius: 12px;
-    }
-    .watermark-container.simple-stars::before,
-    .watermark-container.simple-stars::after,
-    .watermark-container.simple-stars div::before,
-    .watermark-container.simple-stars div::after {
-      font-size: 20px;
-      color: gold;
-      text-shadow: none;
-      top: 10px;
-      bottom: 10px;
-      left: 10px;
-      right: 10px;
-    }
-    .watermark-container.simple-stars::before {
-      top: 10px;
-      left: 10px;
-    }
-    .watermark-container.simple-stars::after {
-      top: 10px;
-      right: 10px;
-    }
-    .watermark-container.simple-stars div::before {
-      bottom: 10px;
-      left: 10px;
-    }
-    .watermark-container.simple-stars div::after {
-      bottom: 10px;
-      right: 10px;
     }
 
     .protected-photo {
@@ -156,7 +82,7 @@
     <div class="watermark-container">
       <img src="https://raw.githubusercontent.com/Hikari-Hikaru/HIKARI-HIKARU_Birthday-2025/main/image0.jpeg" alt="誕生日の写真1" class="protected-photo">
     </div>
-    <div class="watermark-container simple-stars">
+    <div class="watermark-container">
       <img src="https://raw.githubusercontent.com/Hikari-Hikaru/HIKARI-HIKARU_Birthday-2025/main/image2.jpeg" alt="誕生日の写真2" class="protected-photo">
     </div>
   </div>
