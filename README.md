@@ -93,6 +93,7 @@
   </div>
 
   <script>
+    // モーダル表示機能
     const modal = document.getElementById('modal');
     const modalImg = modal.querySelector('img');
     const photos = document.querySelectorAll('.protected-photo');
@@ -107,6 +108,20 @@
     modal.addEventListener('click', () => {
       modal.style.display = 'none';
       modalImg.src = '';
+    });
+
+    // 画像右クリック禁止
+    document.addEventListener('contextmenu', function(event) {
+      if (event.target.tagName === 'IMG') {
+          event.preventDefault();
+      }
+    });
+
+    // 画像ドラッグ禁止
+    document.addEventListener('dragstart', function(event) {
+      if (event.target.tagName === 'IMG') {
+        event.preventDefault();
+      }
     });
   </script>
 </body>
